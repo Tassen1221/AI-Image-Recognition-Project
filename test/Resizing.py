@@ -24,5 +24,5 @@ def resize_images(folder_path, size=(100, 100)):
                 print(f"Error processing {filename}: {e}")
 
 # Specify the folder path containing the images
-folder_path = "/Users/benjaminyang/Desktop/AI-Image-Recognition-Project/BB"
+folder_path = "/Users/benjaminyang/Desktop/AI-Image-Recognition-Project/DD"
 resize_images(folder_path)

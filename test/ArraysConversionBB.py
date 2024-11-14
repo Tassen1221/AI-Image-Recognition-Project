@@ -2,8 +2,8 @@ from PIL import Image
 import numpy as np
 import os
 
-def images_to_arrays(folder_path):
-    arrays = []
+def images_to_arraysBB(folder_path):
+    arraysBB = []
     for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         
@@ -15,18 +15,18 @@ def images_to_arrays(folder_path):
                     if img.size == (100, 100) and img.mode == 'L':
                         # Convert image to a numpy array and add it to the list
                         img_array = np.array(img)
-                        arrays.append(img_array)
+                        arraysBB.append(img_array)
                         # print(f"Converted: {filename} to array")
                     else:
                         print(f"Skipped: {filename} (not 100x100 or not grayscale)")
             except Exception as e:
                 print(f"Error processing {filename}: {e}")
     
-    return arrays
+    return arraysBB
 
 # Specify the folder path containing the images
 folder_path = "/Users/benjaminyang/Desktop/AI-Image-Recognition-Project/BB"
-arrays = images_to_arrays(folder_path)
+arraysBB = np.array(images_to_arraysBB(folder_path))
 
-# Now `arrays` contains a list of numpy arrays for each 100x100 black and white image
-print(f"Total images converted to arrays: {len(arrays)}")
+# Now `arraysBB` contains a list of numpy arraysBB for each 100x100 black and white image
+print(f"Total images converted to arraysBB: {len(arraysBB)}")
