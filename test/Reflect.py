@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # Set the folder containing the images
-folder_path = "/Users/benjaminyang/Desktop/AI-Image-Recognition-Project/DD"  # Change this to the folder containing your images
+folder_path = "/Users/benjaminyang/Desktop/BBImagesData"  # Change this to your folder path
 
 # Get a list of all files in the folder
 file_names = os.listdir(folder_path)
